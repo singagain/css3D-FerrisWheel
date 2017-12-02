@@ -1,0 +1,164 @@
+<html>
+<head>
+	<title>ferris-wheel</title>
+	<meta charset="utf-8"/>
+	<style>
+	*{
+		margin:0px;
+		padding: 0px;
+	}
+	body{
+		background: url("images/2.jpg");
+		background-size: cover;
+		background-position: center center;
+	}
+	.box{
+		/*border:solid 1px red;*/
+		width: 1000px;
+		height: 1000px;
+		margin:0px auto;
+		position: relative;
+	}
+	.wheel{
+		background: url("images/fsw.png");
+		height:768px;
+		width: 768px;
+		margin: 0px auto;
+		-webkit-animation:wheelrotation 10s linear infinite;
+		position: relative;
+	}
+	.bracket{
+		width: 358px;
+		height: 529px;
+		background: url("images/bracket.png") no-repeat;
+		position: absolute;
+		left:318px;
+		top:375px;
+	}
+	.bracketsmall{
+		width: 247px;
+		height: 505px;
+		background: url("images/bracketsmall.png") no-repeat;
+		position: absolute;
+		left:375px;
+		top:382px;
+		z-index:-2;
+	}
+	.bigtitle{
+		width: 577px;
+		height: 257px;
+		position: absolute;
+		left: 212px;
+		top: 269px;
+		background-image: url("images/big-title.png");
+	}
+	.title{
+		width: 413px;
+		height: 139px;
+		position: absolute;
+		left: 306px;
+		top: 464px;
+		background-image: url("images/title.png");
+	}
+	.arrow{
+		width: 48px;
+		height: 64px;
+		position: absolute;
+		left: 482px;
+		top: 550px;
+		background: url("images/arrow.png") no-repeat;
+	}
+	ul{
+		list-style: none;
+	}
+	li{
+		height:170px;
+		width: 130px;
+		position: absolute;
+		-webkit-animation:childrotation 10s linear infinite;
+		-webkit-transform-origin:50% 0;
+
+	}
+	li:nth-child(1){
+		background: url("images/boy.png");
+		left: 330px;
+		top:0px;
+	}
+	li:nth-child(2){
+		background: url("images/dog.png");
+		left: 594px;
+		top:125px;
+	}
+	li:nth-child(3){
+		background: url("images/girl.png");
+		left: 694px;
+		top:370px;
+	}
+	li:nth-child(4){
+		background: url("images/girls.png");
+		left: 594px;
+		top:650px;
+	}
+	li:nth-child(5){
+		background: url("images/hairboy.png");
+		left: 330px;
+		top:740px;
+	}
+	li:nth-child(6){
+		background: url("images/mimi.png");
+		left: 94px;
+		top:640px;
+	}
+	li:nth-child(7){
+		background: url("images/mudog.png");
+		left: -6px;
+		top:370px;
+	}
+	li:nth-child(8){
+		background: url("images/shamegirl.png");
+		left: 94px;
+		top:125px;
+	}
+
+	@-webkit-keyframes wheelrotation{
+		0%{
+			-webkit-transform:rotate(0deg);
+		}
+		100%{
+			-webkit-transform:rotate(360deg);
+		}
+	}
+	@-webkit-keyframes childrotation{
+		0%{
+			-webkit-transform:rotate(0deg);
+		}
+		100%{
+			-webkit-transform:rotate(-360deg);
+		}
+	}
+	
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="wheel">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		
+		<div class="bracket"></div>
+		<div class="bracketsmall"></div>
+		<div class="bigtitle"></div>
+		<div class="title"></div>
+		<div class="arrow"></div>
+	</div>
+</body>
+</html>
